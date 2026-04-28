@@ -1,0 +1,149 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== GENERAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f1ee;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex; /* Flexbox requerido */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #3e2723;
+    color: white;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://via.placeholder.com/1200x500') no-repeat center/cover;
+    color: white;
+}
+
+.hero button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #6d4c41;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== MENU ===== */
+.menu {
+    padding: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #6d4c41;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* ===== ABOUT ===== */
+
+.about-container {
+    display: flex; /* Esto crea las dos columnas */
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about-img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1; /* Ocupa el espacio restante */
+}
+
+.about-text ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* En móvil se apila */
+        text-align: center;
+    }
+}
+/* ===== GALLERY ===== */
+.gallery {
+    padding: 40px;
+}
+
+.grid {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.grid img {
+    width: 100%;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #3e2723;
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    /* Mostrar hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Ocultar menú */
+    .nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    /* Grid en 2 columnas */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
